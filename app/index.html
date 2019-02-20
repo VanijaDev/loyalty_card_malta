@@ -1,0 +1,216 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./app.js"></script>
+<style>
+  .hidden{
+    display:none;
+  }
+</style>
+
+
+<script>
+function showReg() {
+  var x = document.getElementById("2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    var sec = document.getElementById("section1");
+    sec.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function showBtn(){
+  var x = document.getElementById('section1');
+    x.style.display = "block";
+  var sec = document.getElementById("3");
+    sec.style.display = "none";
+  }
+</script>
+
+<script>
+function showBtns(){
+  var x = document.getElementById('section1');
+    x.style.display = "block";
+  var sec = document.getElementById("5");
+    sec.style.display = "none";
+  }
+</script>
+
+<script>
+function showReward() {
+  var x = document.getElementById("3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    var sec = document.getElementById("section1");
+    sec.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function addReward(){
+  var x = document.getElementById('4');
+  if (x.style.display === "none"){
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function showLogin(){
+  var x = document.getElementById('5');
+  if (x.style.display === "none"){
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function showUser(){
+  var x = document.getElementById('5');
+  if (x.style.display === "none"){
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<script>
+function showonlyUser(){
+  var x = document.getElementById('5');
+    x.style.display = "block";
+  var sec = document.getElementById("6");
+  sec.style.display = "none";
+}
+</script>
+
+<script>
+function showPayment(){
+var x = document.getElementById('6');
+if (x.style.display === "none"){
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+  }
+}
+</script>
+<title>Valyou on Blockchain</title>
+<img src="https://valyou.com.mt/wp-content/uploads/2016/10/valyou-site-retina-logo.png" style="height:100px"/>
+</head>
+
+<body>
+
+<section id=1>
+<div id="section1"><br>
+<button type="button" onclick=showReg()>Register New</button>
+<button type="button" onclick=showReward()>View Reward List</button>
+<button type="button" onclick=showLogin()>Login</button>
+<button type="button" onclick="App.test()">TEST</button>
+<br>
+</div>
+</section>
+<br />
+
+<section id=2 class="hidden">
+  <div id="section2">
+  <form action="/action_page.php">
+    Username:<br>
+    <input type="text" name="username">
+    <br>
+    Address:<br>
+    <input type="text" name="address">
+    <br><br>
+    <input type="submit" value="Add user">
+  </form>
+  </div>
+</section>
+
+<section id=3 class='hidden'>
+  <div class="dropdown"><br>
+    <select>
+      <option>Item 1</option>
+      <option>Item 2</option>
+      <option>item 3</option>
+      <option>item 4</option>
+    </select>
+  </div><br>
+
+<button type="button" onclick=addReward()>ADD NEW</button>
+<button type="button" onclick=showBtn()>BACK</button>
+</section>
+
+<section id=4 class="hidden">
+  <div id="section4"><br />
+  <form action="/action_page.php">
+    Reward Barcode:<br>
+    <input type="text" name="barcode">
+    <br><br>
+    Reward Name:<br>
+    <input type="text" name="rewardName">
+    <br><br>
+    Points:<br>
+    <input type="text" name="Points">
+    <br><br>
+    Image link:<br>
+    <input type="text" name="image">
+    <br><br>
+    <input type="submit" value="Add reward">
+  </form>
+  </div>
+</section>
+
+<section id=5 class="hidden">
+  <form action="/action_page.php">
+    Username:<br>
+    <input type="text" name="username">
+    <br><br>
+    Points:<br>
+    <input type="text" name="points">
+    <br><br>
+    Cashback:<br>
+    <input type="text" name="cashback">
+    <br><br>
+    </form>
+    <button type='button' onclick=showPayment()>Pay</button>
+    <button>Redeem Cashback</button>
+    <button>Rewards</button>
+    <button type="button" onclick=showBtns()>Back</button>
+</section>
+
+<section id=6 class="hidden">
+  <br />
+  <form action="/action_page.php">
+    Payment Amount:<br>
+    <input type="text" name="paymentAmount">
+    <br><br>
+    Use cashback:<br>
+    <input type="checkbox" name="bachback"><br>
+  </form>
+    <button type="button">Enter</button>
+    <button type="button" onclick=showonlyUser()>Back</button>
+</section>
+
+<section id=7 class="hidden">
+  <br>
+<form>
+  <input type="radio" name="cashback">Cashback<br><br>
+  <input type="radio" name="points">Points<br><br>
+  <button type="button" onclick=showUser()>Enter</button>
+  <button type="button" onclick=showPayment()>Back</button>
+</form>
+</section>
+
+</body>
+</html>
+
