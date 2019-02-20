@@ -69,7 +69,7 @@ contract LoyaltyCard {
     
     //******************************CUSTOMER**********************************************************
     //https://blockgeeks.com/guides/solidity/
-    function addCustomer(string username, uint256 points, uint[] customerRewards) returns (bool success) 
+    function addCustomer(string username, uint256 points, uint[] customerRewards) public returns (bool success) 
     {
         address newCustomer = msg.sender;
         // don't overwrite existing entries, and make sure handle isn't null
@@ -81,11 +81,11 @@ contract LoyaltyCard {
             customers[newCustomer].status = true;
 
             customerList.push(newCustomer);  // adds an entry for this user to the user 'whitepages'
-            return true;
+            success = true;
         } 
         else 
         {
-            return false; // either handle was null, or a user with this handle already existed
+            success = false; // either handle was null, or a user with this handle already existed
         }
     }
     
@@ -137,11 +137,6 @@ contract LoyaltyCard {
     function test() public pure returns (uint256)
     {
         return 100;
-    }
-    
-    function testString() public pure returns (string)
-    {
-        return "testString func";
     }
 
     function redeemPoints(address cust, uint256 points, uint256 rewardId)

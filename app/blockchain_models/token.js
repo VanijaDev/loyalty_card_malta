@@ -122,19 +122,6 @@ let Token = {
             "signature": "0xf8a8fd6d"
         },
         {
-            "constant": true,
-            "inputs": [],
-            "name": "testString",
-            "outputs": [{
-                "name": "",
-                "type": "string"
-            }],
-            "payable": false,
-            "stateMutability": "pure",
-            "type": "function",
-            "signature": "0xfb8f0f59"
-        },
-        {
             "constant": false,
             "inputs": [{
                     "name": "cust",
